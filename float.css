@@ -1,0 +1,381 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+	min-height: 100vh;
+	background-image: url(gameimg/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+    /* NAVBAR */
+.navigasi {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(20, 20, 20);
+	display: flex;
+}
+
+.navigasi h1 {
+	margin: 15px 0 0 15px;
+	color: rgb(119, 240, 125);
+	font: bold 30px/28px arial;
+}
+    /* NAVBAR END */
+    
+	/* CONTENT LEFT */
+.left {
+	position: fixed;
+	width: 20%;
+	top: 60px;
+	height: 770px;
+    background-color: rgb(34, 34, 34);
+	float: left;
+}
+
+.listgame {
+	overflow: auto;
+	margin-right: 2.5px;
+	height: 685px;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.game .list:hover {
+	background-color: rgb(4, 77, 20) ;
+}
+
+.game,.listgame:hover {
+	visibility: visible;
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(94, 94, 94);
+	border-radius: 10px;
+}
+
+
+.list {
+	background-color: rgb(34, 34, 34);
+	display: flex;
+	padding: 5px;
+	border-bottom: 2px black solid;
+}
+
+.list .gtav {
+	width: 48px;
+	height: 58px;
+}
+
+.list img {
+	width: 48px;
+	height: 48px;
+}
+
+.list .h1cod {
+	font-size: 1.1em;
+}
+
+.list img {
+    margin-left: 5px;
+}
+.list h1 {
+	color: white;
+	font: normal 18px/50px arial;
+	margin-left: 10px;
+}	
+
+.title {
+	background-color: rgb(34, 34, 34);
+	display: flex;
+	padding: 5px;
+	border-bottom: 2px black solid;
+	color: white;
+	font: 24px/50px "Viga", sans-serif;
+	margin-left: 10px;
+}
+
+    /* CONTENT LEFT END */
+
+	/* CONTENT CENTER */
+.center {
+	position: fixed;
+	left: 20%;
+    margin: 0 auto;
+	right: 0;
+	height: 741px;
+	background-color: rgb(211, 211, 223);
+}
+
+.center h1 {
+	margin-left: 20px;
+	font: bold 40px "Afacad Flux", sans-serif;
+	color: rgb(78, 78, 78);
+}
+.top {
+	display: flex;
+	margin: 25px;
+}
+
+.warp {
+	width: 150px;
+	height: 290px;
+	background-color: white;
+	border: 1px black solid;
+	flex: 1;
+    cursor: pointer;
+	border-radius: 10px;
+}
+
+.warp:hover {
+	flex: 4;
+	transition: all 0.5s ease-in-out;
+}
+
+.warp img {
+	background-image: url(gameimg/bg.jpg);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	flex: 1;
+    cursor: pointer;
+	border-radius: 10px;
+}
+    /* CONTENT CENTER END */
+
+	/* CONTENT RIGHT */
+/*
+.end {
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 20%;
+	background-color: transparent;
+	float: right;
+	border-radius: 10px;
+	box-shadow: -5px 0px 36px 0px  rgba(9,176,0,1);
+}
+
+.end::before {
+	content: '';
+	position: fixed;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 20%;
+	background-color: black;
+	float: right;
+	border-radius: 10px;
+	opacity: 0.8;
+	z-index: -1;
+}
+
+.header {
+	margin: 10px;
+	background-color: transparent;
+	display: flex;
+	height: 65px;
+	border: 5px rgba(9,176,0,1);
+	border-radius: 10px;
+	box-shadow: 0px 0px 8px 3px rgba(9,176,0,1);
+}
+.header h1 {
+	margin-top: 10px;
+	font: 24px/50px "Viga", sans-serif;
+	color: white;
+}
+
+.header img {
+    width:60px;
+	height: 60px;
+}
+
+.chat {
+	height: 715px;
+	overflow: auto;
+}
+
+.line {
+	margin-top: 40px;
+	width: 20px;
+	height: 1px;
+	background-color: rgba(9,176,0,1);
+	box-shadow: 0px 0px 8px 3px rgba(9,176,0,1);
+}
+
+.lineend {
+	margin-top: 11px;
+	margin-left: -21px;
+	width: 260px;
+	height: 1px;
+	background-color: rgba(9,176,0,1);
+	box-shadow: 0px 0px 8px 3px rgba(9,176,0,1);
+} 
+
+.chat1 {
+    display: flex;
+}
+
+
+
+.chat2 {
+	margin-top: 5px;
+	display: flex;
+}
+
+.chat3 {
+	margin-top: 5px;
+	display: flex;
+}
+
+.chat img {
+	margin-top: 10px;
+	margin-left: 0;
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 8px 3px rgba(9,176,0,1);
+}
+
+.sam {
+	aspect-ratio: 2/4;
+}
+
+.message {
+}
+
+.chat h1 {
+	color: white;
+	font: 23px/50px "Jost", sans-serif;
+	margin-left: 10px;
+	letter-spacing: 2px;
+}
+
+.chat p {
+	color: rgb(192, 192, 192);
+	font: normal 18px/10px arial;
+	margin-left: 10px;
+}
+*/
+
+    /* CONTENT RIGHT END */
+
+
+/* BUANGAN 
+.rdr2 {
+	width: 48px;
+	height: 48px;
+}
+
+.pb {
+	width: 48px;
+	height: 48px;
+}
+
+.zomboid {
+	width: 48px;
+	height: 48px;
+}
+
+.valorant {
+	width: 48px;
+	height: 48px;
+}
+
+.pgr {
+	width: 48px;
+	height: 48px;
+}
+
+.csgo {
+	width: 48px;
+	height: 48px;
+}
+
+.sekiro {
+    width: 48px;
+	height: 48px;
+}
+
+.got {
+	width: 48px;
+	height: 48px;
+}
+
+.tekken8 {
+	width: 48px;
+	height: 48px;
+}
+
+.darksouls {
+	width: 48px;
+	height: 48px;
+}
+
+.eldenring {
+	width: 48px;
+	height: 48px;
+}
+
+.terraria {
+    width: 48px;
+	height: 48px;
+}
+
+.minicraft {
+	width: 48px;
+	height: 48px;
+}
+
+.codm {
+	width: 48px;
+	height: 48px;
+}*/
